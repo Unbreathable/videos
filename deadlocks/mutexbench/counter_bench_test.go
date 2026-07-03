@@ -5,8 +5,6 @@ import (
 	"testing"
 )
 
-const WorkerCount = 50
-
 func BenchmarkCounterMutex(b *testing.B) {
 	counter := &mutexbench.CounterMutex{}
 	counter.Init()
@@ -22,7 +20,6 @@ func BenchmarkCounterMutexParallel(b *testing.B) {
 	counter := &mutexbench.CounterMutex{}
 	counter.Init()
 
-	b.SetParallelism(WorkerCount)
 	b.ResetTimer()
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
@@ -47,7 +44,6 @@ func BenchmarkCounterAtomicParallel(b *testing.B) {
 	counter := &mutexbench.CounterAtomic{}
 	counter.Init()
 
-	b.SetParallelism(WorkerCount)
 	b.ResetTimer()
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
@@ -72,7 +68,6 @@ func BenchmarkCounterWorkerParallel(b *testing.B) {
 	counter := &mutexbench.CounterWorker{}
 	counter.Init()
 
-	b.SetParallelism(WorkerCount)
 	b.ResetTimer()
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {

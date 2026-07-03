@@ -28,6 +28,8 @@
 - Show an example with the counter (even though doesn't make much sense there)
 - Use opportunity to also explain how atomic.Int32 is a hardware primitive and therefore much faster than anything you can do
 - Show benchmark to highlight how with a little bit of work the channel is actually faster
+  - Worker count actually doesn't really matter a whole lot (results don't change very much)
+  -
 
 ## 5. Multiple objects: Just sort them and be fine
 
