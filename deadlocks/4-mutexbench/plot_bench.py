@@ -22,6 +22,22 @@ def parse_bench(filename):
 
 data = parse_bench('bench_results.txt')
 
+# Plot 1: Total time
+plt.figure(figsize=(10, 6))
+for label, values in data.items():
+    sorted_ns = sorted(values.keys())
+    sorted_vals = [values[n] for n in sorted_ns]
+    plt.plot(sorted_ns, sorted_vals, marker='o', label=label)
+
+plt.xlabel('Number of Hashes (N)')
+plt.ylabel('Total ns/op')
+plt.title('Benchmark: Mutex vs Channel Worker (Total Time)')
+plt.legend()
+plt.grid(True)
+plt.savefig('hashing_benchmark.png')
+print("Graph saved to hashing_benchmark.png")
+
+# Plot 2: Normalized time
 plt.figure(figsize=(10, 6))
 for label, values in data.items():
     sorted_ns = sorted(values.keys())

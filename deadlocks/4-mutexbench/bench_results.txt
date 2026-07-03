@@ -1,0 +1,66 @@
+goos: linux
+goarch: amd64
+pkg: mutexbench
+cpu: AMD Ryzen 7 5800X 8-Core Processor             
+BenchmarkHashingMutex/N=1-16 	 4175244	       292.2 ns/op	   4175244 ops
+BenchmarkHashingMutex/N=1-16 	 4099520	       290.2 ns/op	   4099520 ops
+BenchmarkHashingMutex/N=1-16 	 4111810	       288.0 ns/op	   4111810 ops
+BenchmarkHashingMutex/N=2-16 	 2150461	       549.0 ns/op	   2150461 ops
+BenchmarkHashingMutex/N=2-16 	 2183031	       551.5 ns/op	   2183031 ops
+BenchmarkHashingMutex/N=2-16 	 2158141	       551.7 ns/op	   2158141 ops
+BenchmarkHashingMutex/N=3-16 	 1463990	       823.2 ns/op	   1463990 ops
+BenchmarkHashingMutex/N=3-16 	 1472377	       817.3 ns/op	   1472377 ops
+BenchmarkHashingMutex/N=3-16 	 1457215	       825.8 ns/op	   1457215 ops
+BenchmarkHashingMutex/N=4-16 	 1000000	      1094 ns/op	   1000000 ops
+BenchmarkHashingMutex/N=4-16 	 1000000	      1077 ns/op	   1000000 ops
+BenchmarkHashingMutex/N=4-16 	 1000000	      1079 ns/op	   1000000 ops
+BenchmarkHashingMutex/N=5-16 	  874945	      1334 ns/op	    874945 ops
+BenchmarkHashingMutex/N=5-16 	  868935	      1342 ns/op	    868935 ops
+BenchmarkHashingMutex/N=5-16 	  922980	      1339 ns/op	    922980 ops
+BenchmarkHashingMutex/N=6-16 	  731858	      1585 ns/op	    731858 ops
+BenchmarkHashingMutex/N=6-16 	  726266	      1595 ns/op	    726266 ops
+BenchmarkHashingMutex/N=6-16 	  775190	      1604 ns/op	    775190 ops
+BenchmarkHashingMutex/N=7-16 	  642238	      1848 ns/op	    642238 ops
+BenchmarkHashingMutex/N=7-16 	  630361	      1860 ns/op	    630361 ops
+BenchmarkHashingMutex/N=7-16 	  644053	      1857 ns/op	    644053 ops
+BenchmarkHashingMutex/N=8-16 	  575413	      2107 ns/op	    575413 ops
+BenchmarkHashingMutex/N=8-16 	  573386	      2125 ns/op	    573386 ops
+BenchmarkHashingMutex/N=8-16 	  545775	      2110 ns/op	    545775 ops
+BenchmarkHashingMutex/N=9-16 	  509535	      2385 ns/op	    509535 ops
+BenchmarkHashingMutex/N=9-16 	  488629	      2381 ns/op	    488629 ops
+BenchmarkHashingMutex/N=9-16 	  508539	      2363 ns/op	    508539 ops
+BenchmarkHashingMutex/N=10-16         	  456639	      2633 ns/op	    456639 ops
+BenchmarkHashingMutex/N=10-16         	  453804	      2643 ns/op	    453804 ops
+BenchmarkHashingMutex/N=10-16         	  450278	      2634 ns/op	    450278 ops
+BenchmarkHashingWorker/N=1-16         	 1994169	       595.7 ns/op	   1994169 ops
+BenchmarkHashingWorker/N=1-16         	 2013810	       592.8 ns/op	   2013810 ops
+BenchmarkHashingWorker/N=1-16         	 2003736	       595.6 ns/op	   2003736 ops
+BenchmarkHashingWorker/N=2-16         	 1425548	       839.8 ns/op	   1425548 ops
+BenchmarkHashingWorker/N=2-16         	 1428921	       847.4 ns/op	   1428921 ops
+BenchmarkHashingWorker/N=2-16         	 1422766	       835.2 ns/op	   1422766 ops
+BenchmarkHashingWorker/N=3-16         	 1000000	      1089 ns/op	   1000000 ops
+BenchmarkHashingWorker/N=3-16         	 1000000	      1093 ns/op	   1000000 ops
+BenchmarkHashingWorker/N=3-16         	 1000000	      1097 ns/op	   1000000 ops
+BenchmarkHashingWorker/N=4-16         	  861568	      1376 ns/op	    861568 ops
+BenchmarkHashingWorker/N=4-16         	  859209	      1391 ns/op	    859209 ops
+BenchmarkHashingWorker/N=4-16         	  831057	      1382 ns/op	    831057 ops
+BenchmarkHashingWorker/N=5-16         	  736258	      1609 ns/op	    736258 ops
+BenchmarkHashingWorker/N=5-16         	  758460	      1606 ns/op	    758460 ops
+BenchmarkHashingWorker/N=5-16         	  710257	      1598 ns/op	    710257 ops
+BenchmarkHashingWorker/N=6-16         	  603042	      1896 ns/op	    603042 ops
+BenchmarkHashingWorker/N=6-16         	  612223	      1891 ns/op	    612223 ops
+BenchmarkHashingWorker/N=6-16         	  609276	      1888 ns/op	    609276 ops
+BenchmarkHashingWorker/N=7-16         	  540226	      2091 ns/op	    540226 ops
+BenchmarkHashingWorker/N=7-16         	  557377	      2085 ns/op	    557377 ops
+BenchmarkHashingWorker/N=7-16         	  571324	      2078 ns/op	    571324 ops
+BenchmarkHashingWorker/N=8-16         	  504846	      2379 ns/op	    504846 ops
+BenchmarkHashingWorker/N=8-16         	  511797	      2325 ns/op	    511797 ops
+BenchmarkHashingWorker/N=8-16         	  505143	      2336 ns/op	    505143 ops
+BenchmarkHashingWorker/N=9-16         	  447178	      2610 ns/op	    447178 ops
+BenchmarkHashingWorker/N=9-16         	  447679	      2589 ns/op	    447679 ops
+BenchmarkHashingWorker/N=9-16         	  428948	      2619 ns/op	    428948 ops
+BenchmarkHashingWorker/N=10-16        	  412504	      2829 ns/op	    412504 ops
+BenchmarkHashingWorker/N=10-16        	  417080	      2819 ns/op	    417080 ops
+BenchmarkHashingWorker/N=10-16        	  420946	      2817 ns/op	    420946 ops
+PASS
+ok  	mutexbench	80.850s

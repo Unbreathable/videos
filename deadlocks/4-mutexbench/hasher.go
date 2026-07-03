@@ -29,22 +29,25 @@ func (s *HasherMutex) Get() int64 {
 
 type HasherWorker struct {
 	count int64
-	ch    chan struct{}
+	ch    chan chan struct{}
 	N     int
 }
 
 func (s *HasherWorker) Init() {
-	s.ch = make(chan struct{})
+	s.ch = make(chan chan struct{})
 	go func() {
-		for range s.ch {
+		for rt := range s.ch {
 			doWork(s.N)
 			s.count++
+			rt <- struct{}{}
 		}
 	}()
 }
 
 func (s *HasherWorker) Run() {
-	s.ch <- struct{}{}
+	rt := make(chan struct{})
+	s.ch <- rt
+	<-rt
 }
 
 func (s *HasherWorker) Get() int64 {

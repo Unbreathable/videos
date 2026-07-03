@@ -7,29 +7,32 @@
 ## 1. Intro
 
 - Ever run into deadlocks?
--
+- There are simple architecture tricks to avoid them, but they are not always obvious
+- Explain content of the video
 
 ## 2. Why?
 
-- Specifically explain how Go's parallelism goes (one goroutine per request, etc.)
+- Specifically explain how Go's parallelism goes (one goroutine / thread per request, etc.)
 - Sharing data is not so simple (show counter example)
 - Show how you can work around it with a mutex
 
 ## 3. The simple, but problematic solution
 
-- Explain mutex: Only one person can lock _TODO: Create diagram_
+- Explain mutex: Only one person can lock
 - Problem with mutexes: Show examples of two cases
-  - The classic _TODO: Create code example_
-  - Leaving one open _TODO: Create code example_
+  - The classic
+  - Leaving one open
 
 ## 4. Single object: Just use channels, faster anyway
 
-- Explain the channel architecture based on a diagram _TODO: Create_
+- Explain the channel architecture based on a diagram
 - Show an example with the counter (even though doesn't make much sense there)
 - Use opportunity to also explain how atomic.Int32 is a hardware primitive and therefore much faster than anything you can do
 - Show benchmark to highlight how with a little bit of work the channel is actually faster
   - Worker count actually doesn't really matter a whole lot (results don't change very much)
-  -
+  - The worker closes in more and more on the mutex implementation
+  - **Conclusion:** If you do real work while the mutex is locked, you might as well use the worker (most of your code will likely do more than 2600 ns of work)
+- This is not for highly parallel systems, but for people searching an alternative that is still thread-safe
 
 ## 5. Multiple objects: Just sort them and be fine
 
