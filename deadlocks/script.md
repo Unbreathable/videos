@@ -6,19 +6,18 @@
 
 ## 1. Intro
 
-- Ever run into deadlocks?
-- There are simple architecture tricks to avoid them, but they are not always obvious
+- Ever written a parallel system? -> Then you probably had to share data between parallel tasks.
 - Explain content of the video
 
 ## 2. Why?
 
+- Explain mutex: Only one person can lock
 - Specifically explain how Go's parallelism goes (one goroutine / thread per request, etc.)
 - Sharing data is not so simple (show counter example)
 - Show how you can work around it with a mutex
 
 ## 3. The simple, but problematic solution
 
-- Explain mutex: Only one person can lock
 - Problem with mutexes: Show examples of two cases
   - The classic
   - Leaving one open
